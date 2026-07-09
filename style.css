@@ -1,0 +1,803 @@
+/* ===================================
+   Reset
+=================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #7b9273;
+  color: #3f3b37;
+  font-family: "Noto Serif JP", serif;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===================================
+   Layout
+=================================== */
+
+main {
+  width: min(92%, 1200px);
+  margin: auto;
+}
+
+/* ===================================
+   Header
+=================================== */
+
+.header {
+  width: min(92%, 1200px);
+  margin: auto;
+
+  height: 90px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-btn {
+  border: none;
+  background: none;
+
+  font-size: 15px;
+  letter-spacing: 0.15em;
+
+  cursor: pointer;
+  font-family: "Noto Serif JP", serif;
+}
+
+/* ===================================
+   Drawer Menu
+=================================== */
+
+.drawer {
+  position: fixed;
+
+  top: 0;
+  right: -300px;
+
+  width: 280px;
+  height: 100vh;
+
+  background: #f5f2ea;
+
+  padding: 80px 40px;
+
+  transition: 0.4s;
+
+  z-index: 1000;
+
+  box-shadow: -8px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+#menu-btn-check:checked ~ .drawer {
+  right: 0;
+}
+
+.drawer h2 {
+  margin-bottom: 40px;
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.drawer li {
+  margin-bottom: 25px;
+}
+
+.drawer a {
+  font-size: 1.1rem;
+
+  transition: 0.3s;
+}
+
+.drawer a:hover {
+  opacity: 0.5;
+}
+
+/* ===================================
+   Hero
+=================================== */
+
+.hero {
+  padding-bottom: 90px;
+}
+
+.hero h1 {
+  text-align: center;
+
+  color: #fff;
+
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+
+  font-weight: 400;
+
+  margin-bottom: 45px;
+
+  letter-spacing: 0.05em;
+}
+
+.hero-image {
+  position: relative;
+
+  width: min(100%, 520px);
+
+  margin: auto;
+}
+
+.hero-image img {
+  aspect-ratio: 3/4;
+
+  object-fit: cover;
+
+  border-radius: 35px;
+}
+
+.hero-copy {
+  position: absolute;
+
+  bottom: 40px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90%;
+
+  text-align: center;
+
+  line-height: 2;
+
+  color: #222;
+
+  font-size: 0.95rem;
+
+  font-weight: 500;
+
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 1),
+    0 0 25px rgba(255, 255, 255, 0.95),
+    0 0 45px rgba(255, 255, 255, 0.9);
+}
+
+/* ===================================
+   Types
+=================================== */
+
+.types {
+  background: #f6f4ed;
+
+  border-radius: 220px 220px 0 0;
+
+  padding: 90px 8%;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 80px;
+}
+
+.section-title h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  font-weight: 500;
+
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  line-height: 2;
+}
+
+.type-box {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 40px;
+
+  margin-bottom: 90px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.type-text {
+  flex: 1;
+}
+
+.type-text h3 {
+  font-size: 2.3rem;
+
+  margin-bottom: 18px;
+
+  font-weight: 500;
+}
+
+.type-text p {
+  line-height: 2;
+}
+
+/* ===========================
+   Diamond
+=========================== */
+
+.diamond {
+  width: 180px;
+  height: 180px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  transform: rotate(45deg);
+
+  flex-shrink: 0;
+
+  transition: 0.4s;
+}
+
+.diamond img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: rotate(-45deg) scale(1.45);
+}
+
+.diamond:hover {
+  transform: rotate(45deg) scale(1.06);
+}
+
+/* ===================================
+   Tablet
+=================================== */
+
+@media (max-width: 900px) {
+  .type-box {
+    gap: 25px;
+  }
+
+  .diamond {
+    width: 140px;
+    height: 140px;
+  }
+
+  .type-text h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===================================
+   Smartphone
+=================================== */
+
+@media (max-width: 700px) {
+  .hero {
+    padding-bottom: 60px;
+  }
+
+  .types {
+    border-radius: 140px 140px 0 0;
+
+    padding: 70px 30px;
+  }
+
+  .type-box {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .type-text {
+    width: 100%;
+  }
+
+  .diamond {
+    width: 130px;
+    height: 130px;
+
+    margin-bottom: 15px;
+  }
+
+  .hero-copy {
+    font-size: 0.85rem;
+
+    line-height: 1.9;
+  }
+  /* ===========================
+   CSSだけで開くメニュー
+=========================== */
+
+  #menu-btn-check {
+    display: none;
+  }
+
+  .drawer {
+    position: fixed;
+
+    top: 0;
+    right: -300px;
+
+    width: 280px;
+    height: 100vh;
+
+    background: #f6f4ed;
+
+    padding: 80px 40px;
+
+    transition: 0.4s;
+
+    z-index: 999;
+  }
+
+  #menu-btn-check:checked ~ .drawer {
+    right: 0;
+  }
+
+  .menu-btn {
+    cursor: pointer;
+
+    font-size: 15px;
+
+    letter-spacing: 0.15em;
+
+    transition: 0.3s;
+  }
+
+  .menu-btn:hover {
+    opacity: 0.7;
+  }
+}
+/* ===================================
+   SHOP
+=================================== */
+
+.shop {
+  background: #7b9273;
+
+  padding: 90px 0;
+}
+
+.shop .section-title {
+  color: #fff;
+
+  margin-bottom: 70px;
+}
+
+.shop-box {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 50px;
+
+  margin-bottom: 80px;
+}
+
+.shop-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.shop-text {
+  flex: 1;
+
+  color: #fff;
+}
+
+.shop-text h3 {
+  font-size: 2rem;
+
+  font-weight: 500;
+
+  line-height: 1.6;
+
+  margin-bottom: 18px;
+}
+
+.shop-text p {
+  line-height: 2;
+
+  font-size: 1rem;
+}
+
+.shop-image {
+  width: 55%;
+
+  aspect-ratio: 4/3;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  transition: 0.4s;
+}
+
+.shop-image:hover {
+  transform: scale(1.03);
+}
+
+/* ===================================
+   ENJOY
+=================================== */
+
+.enjoy {
+  background: #f6f4ed;
+
+  padding: 90px 8%;
+}
+
+.enjoy-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 45px;
+
+  margin-bottom: 90px;
+}
+
+.enjoy-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.circle-image {
+  width: 200px;
+
+  height: 200px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+
+  transition: 0.4s;
+}
+
+.circle-image:hover {
+  transform: scale(1.05);
+}
+
+.enjoy-text {
+  flex: 1;
+}
+
+.enjoy-text h2 {
+  font-size: 2rem;
+
+  font-weight: 500;
+
+  margin-bottom: 20px;
+}
+
+.enjoy-text p {
+  line-height: 2;
+
+  font-size: 1rem;
+}
+
+/* ===================================
+   Footer Image
+=================================== */
+
+.footer-visual {
+  background: #f6f4ed;
+
+  padding: 0 8%;
+}
+
+.footer-visual img {
+  width: 100%;
+
+  aspect-ratio: 16/7;
+
+  object-fit: cover;
+
+  border-radius: 35px 35px 0 0;
+}
+
+/* ===================================
+   Footer
+=================================== */
+
+footer {
+  background: #7b9273;
+
+  color: #fff;
+
+  text-align: center;
+
+  padding: 25px;
+
+  letter-spacing: 0.08em;
+}
+
+footer small {
+  font-size: 0.9rem;
+}
+
+/* ===================================
+   Tablet
+=================================== */
+
+@media (max-width: 900px) {
+  .shop-box {
+    gap: 30px;
+  }
+
+  .shop-image {
+    width: 50%;
+  }
+
+  .circle-image {
+    width: 170px;
+
+    height: 170px;
+  }
+}
+
+/* ===================================
+   Smartphone
+=================================== */
+
+@media (max-width: 700px) {
+  .shop {
+    padding: 70px 0;
+  }
+
+  .shop-box {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 30px;
+  }
+
+  .shop-box.reverse {
+    flex-direction: column;
+  }
+
+  .shop-image {
+    width: 100%;
+  }
+
+  .enjoy {
+    padding: 70px 30px;
+  }
+
+  .enjoy-box {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 25px;
+  }
+
+  .enjoy-box.reverse {
+    flex-direction: column;
+  }
+
+  .circle-image {
+    width: 150px;
+
+    height: 150px;
+  }
+
+  .enjoy-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-visual {
+    padding: 0;
+  }
+
+  .footer-visual img {
+    border-radius: 30px 30px 0 0;
+  }
+}
+
+/*=========================
+  Page
+==========================*/
+
+.page {
+  width: min(92%, 1100px);
+
+  margin: auto;
+}
+
+.page-hero {
+  text-align: center;
+
+  padding-bottom: 80px;
+}
+
+.page-hero h1 {
+  color: white;
+
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+  margin-bottom: 40px;
+
+  font-weight: 400;
+}
+
+.page-main-image {
+  width: min(100%, 650px);
+
+  margin: auto;
+
+  border-radius: 30px;
+
+  aspect-ratio: 4/5;
+
+  object-fit: cover;
+
+  margin-bottom: 40px;
+}
+
+.page-hero p {
+  line-height: 2;
+}
+
+/*=========================
+ Feature
+==========================*/
+
+.feature {
+  background: #f6f4ed;
+
+  border-radius: 180px 180px 0 0;
+
+  padding: 80px 8%;
+}
+
+.feature-box {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 80px;
+}
+
+.feature-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text h2 {
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+.feature-text p {
+  line-height: 2;
+}
+
+/*=========================
+ Gallery
+==========================*/
+
+.gallery {
+  padding: 80px 0;
+}
+
+.gallery h2 {
+  text-align: center;
+
+  font-size: 2.2rem;
+
+  margin-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.gallery-grid img {
+  border-radius: 20px;
+
+  aspect-ratio: 1;
+
+  object-fit: cover;
+}
+
+/*=========================
+ Back
+==========================*/
+
+.back-home {
+  text-align: center;
+
+  margin: 80px 0;
+}
+
+.back-home a {
+  display: inline-block;
+
+  padding: 15px 45px;
+
+  background: #f6f4ed;
+
+  border-radius: 40px;
+
+  transition: 0.3s;
+}
+
+.back-home a:hover {
+  background: white;
+}
+
+/*=========================
+ Responsive
+==========================*/
+
+@media (max-width: 700px) {
+  .feature {
+    border-radius: 120px 120px 0 0;
+  }
+
+  .feature-box {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .feature-box.reverse {
+    flex-direction: column;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#menu-btn-check {
+  display: none;
+}
