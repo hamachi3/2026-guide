@@ -1222,3 +1222,32 @@ footer small {
     }
 
 }
+@media screen and (max-width:700px){
+
+    .feature-box,
+    .feature-box.reverse{
+        display:block !important;
+        text-align:center !important;
+    }
+
+    .feature-box .diamond{
+        display:block;
+        margin:0 auto 25px;
+    }
+
+    .feature-text{
+        display:block !important;
+        width:100% !important;
+        max-width:none !important;
+        flex:none !important;
+        margin:0 auto !important;
+        padding:0 !important;
+        text-align:center !important;
+    }
+
+    .feature-text p{
+        width:auto !important;
+        writing-mode:horizontal-tb !important;
+        word-break:normal !important;
+    }
+}
