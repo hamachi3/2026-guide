@@ -756,7 +756,17 @@ footer small {
 
   padding: 80px 8%;
 }
+@media (max-width:700px){
 
+    .feature{
+
+        border-radius:140px 140px 0 0;
+
+        padding:70px 30px;
+
+    }
+
+}
 .feature-box {
   display: flex;
 
@@ -1197,6 +1207,17 @@ footer small {
     .diamond{
 
         margin:0 auto 20px;
+
+    }
+
+}
+@media (max-width:700px){
+
+    .feature-text{
+
+        flex:none;
+
+        width:100%;
 
     }
 
