@@ -1054,3 +1054,26 @@ footer small {
     right: 60px;
   }
 }
+
+/* スマホ */
+.feature-content{
+    display:block;
+}
+
+.feature-text{
+    width:100%;
+    text-align:center;
+}
+
+@media (min-width:1024px){
+
+.feature-content{
+    display:flex;
+}
+
+.feature-text{
+    width:40%;
+    text-align:left;
+}
+
+}
