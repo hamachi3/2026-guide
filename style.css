@@ -1098,3 +1098,71 @@ footer small {
 }
     margin: 0 auto;
 }
+
+/* ==========================
+   REAL・ANIME・BLIND スマホ
+========================== */
+
+@media (max-width:700px){
+
+.feature{
+
+    padding:70px 30px;
+
+}
+
+.feature-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:25px;
+
+    margin-bottom:70px;
+
+}
+
+.feature-box.reverse{
+
+    flex-direction:column;
+
+}
+
+.feature-text{
+
+    width:100%;
+
+    margin:0;
+
+}
+
+.feature-text h2{
+
+    margin-bottom:15px;
+
+}
+
+.feature-text p{
+
+    font-size:1rem;
+
+    line-height:2;
+
+}
+
+.diamond{
+
+    width:150px;
+
+    height:150px;
+
+    margin:0 auto;
+
+}
+
+}
