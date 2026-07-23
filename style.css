@@ -1065,26 +1065,16 @@ footer small {
     text-align:center;
 }
 
-@media (min-width:1024px){
-
-.feature-content{
-    display:flex;
+.feature-box{
+    display: block;
+    text-align: center;
 }
 
 .feature-text{
-    width:40%;
-    text-align:left;
+    width: 100%;
+    margin-top: 30px;
 }
 
-}
-.type-card{
-
-    display: block;
-
-}
-
-.feature-box{
-
-    display: block;
-
+.feature-image{
+    margin: 0 auto;
 }
